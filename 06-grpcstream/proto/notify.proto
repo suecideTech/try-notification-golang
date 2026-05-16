@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package notify;
+
+option go_package = "github.com/y-hashisaka/try-notification-golang/06-grpcstream/notifypb";
+
+service Notifier {
+  rpc Stream(StreamRequest) returns (stream Message);
+}
+
+message StreamRequest {}
+
+message Message {
+  int64 seq = 1;
+  string ts = 2;
+  string payload = 3;
+}

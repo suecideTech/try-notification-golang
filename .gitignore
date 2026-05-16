@@ -1,0 +1,19 @@
+# Binaries
+*-client
+*-server
+exe/
+build/
+
+# Go
+*.test
+*.out
+vendor/
+
+# Results / logs (本リポジトリには含めない)
+results/
+*.log
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
